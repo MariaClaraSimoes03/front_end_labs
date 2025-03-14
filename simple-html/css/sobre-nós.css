@@ -7,6 +7,12 @@
     --font-base-secondary: "Big Shoulders Stencil";
     --font-base-figcaption: "Big Shoulders Stencil";
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
+
 body {
     color: var(--color-base);
     font-family: var(--font-base-titulo-principal);
