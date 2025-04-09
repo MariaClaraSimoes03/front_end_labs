@@ -1,80 +1,90 @@
-:root{
-    --color-base: #333;
-    --color-base-figure-background: #f5f5dc;
-    --color-base-figure-border:  #333;
-    --color-base-footer: #333;
-    --font-base-titulo-principal:'Roboto';
-    --font-base-primary: "Big Shoulders Stencil";
-    --font-base-secondary: "Big Shoulders Stencil";
-    --font-base-figcaption: "Big Shoulders Stencil";
+:root {
+    --primary-color: #202298;
+    --secondary-color: #e1551d;
+    --background-color: #F9F9F9;
+    --text-button-color: white;
+    --font-family: Verdana, Geneva, Tahoma, sans-serif;
+    --font-size-medium: medium;
+    --font-size-large: large;
 }
 
-html{
-    scroll-behavior: smooth;
+.flex-container {
+    display: flex;
+    flex-direction: column;
 }
-
 
 body {
-    color: var(--color-base);
-    font-family: var(--font-base-titulo-principal);
-    font-weight: 300;
-    margin-left: auto;
-    margin-right: auto;
-    width: 940px;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    font-family: var(--font-family);
 }
 
-h1 {
-    background-image: url(../img/sobre-background.jpg);
-    padding: 10px;
-    font-family: var(--font-base-primary)
+fieldset {
+    margin-bottom: 10px;
+    background-color: var(--background-color);
+    border-radius: 5px;
 }
 
-h2 {
-    border-bottom: 2px groove var(--color-base-figure-border);
-    margin-top: 30px;
-    font-family: var(--font-base-secondary);}
-
-figure {
-    background-color:var(--color-base-figure-background);
-    border: 1px solid #CCC;
-    text-align: center;
-    padding: 15px;
-    margin: 30px;
+fieldset legend {
+    font-weight: bold;
 }
 
-figcaption {
-    font-style: italic;
-    margin-top: 10px;
-      font-family: var(--font-base-figcaption);
+fieldset input, select {
+    font-size: var(--font-size-medium);
 }
 
-p {
-    padding: 0 45px;
-    text-indent: 25px;
-    text-align: justify;
-
-
+.grid-button-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin: 5px 0;
+    border-bottom: black 5px solid;
 }
 
-#centro-distribuicao{
-    margin-left: auto;
-    margin-right: auto ;
-    width: 550px;
+.grid-button-container input {
+    font-size: var(--font-size-medium);
+    font-weight: bold;
+    color: var(--text-button-color);
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
 }
 
-footer{
-    margin: 30px 0;
-    padding: 30px 0;
-    color: var(--color-base-footer);
+.grid-button-container input[type=submit] {
+    background-color: var(--primary-color);
 }
 
-footer img{
-    margin-right: 30px 0;
+.grid-button-container input[type=reset] {
+    background-color: var(--secondary-color);
+}
+
+.grid-button-container input:focus{
+    outline: 2px solid black;
+}
+
+.grid-header-container {
+    display: grid;
+    grid-template-areas: 'top-left top-right';
+    border-bottom: black 5px solid;
+    margin-bottom: 5px;
+}
+
+.top-left {
+    grid-area: top-left;
+    justify-self: left;
+}
+
+.top-right {
+    grid-area: top-right;
+    justify-self: right;
+}
+
+i {
     vertical-align: middle;
-    width: 94px ;
 }
 
-#familia-pelho{
-float: right;
-margin: 0 0 10px 10px;
+h1, h2 {
+    font-size: var(--font-size-large);
 }
