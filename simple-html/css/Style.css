@@ -1,0 +1,76 @@
+
+.titulo-principal {
+    color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+}
+
+.titulo-secundario {
+    color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+}
+
+.maiusculas {
+    text-transform: uppercase;
+}
+
+.bloco-info p {
+    text-transform: lowercase;
+}
+
+.bloco-info {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .titulo-principal,
+    .titulo-secundario,
+    .bloco-info {
+        text-align: center;
+    }
+
+    .titulo-principal {
+        font-size: 1.6rem;
+        color: darkred;
+    }
+
+    .titulo-secundario {
+        font-size: 1.3rem;
+    }
+
+    .bloco-info {
+        width: 90%;
+        padding: 15px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .titulo-principal {
+        font-size: 1.3rem;
+    }
+
+    .titulo-secundario {
+        font-size: 1.1rem;
+    }
+
+    .bloco-info {
+        width: 95%;
+        padding: 10px;
+    }
+
+    body {
+        padding: 10px;
+    }
+}

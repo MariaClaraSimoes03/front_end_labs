@@ -1,0 +1,128 @@
+:root {
+  --color-primary: #0f71ff;
+  --color-background: #ecf4ff;
+  --color-text: #36393f;
+  --color-light: #f7f7f7;
+  --color-alert: orange;
+
+  --font-main: "Poppins", sans-serif;
+
+  --card-width: 300px;
+  --card-padding: 40px;
+  --card-height: 540px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.card {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  width: var(--card-width);
+  max-width: var(--card-width);
+  height: var(--card-height);
+  padding: var(--card-padding);
+  border-radius: 15px;
+  background-color: white;
+  font-size: 100%;
+  text-align: center;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.10);
+  box-shadow: 0 4px 20px rgb(186, 181, 210);
+}
+
+.card h2 {
+  margin: 0;
+  text-shadow: 1px 1px 2px gray;
+}
+
+.card var {
+  color: var(--color-primary);
+  font-weight: 400;
+  font-size: 40px;
+  font-style: normal;
+  margin-bottom: 10px;
+  transition: font-size 0.3s ease;
+}
+
+.card:hover var {
+  font-size: 50px;
+}
+
+.card var small {
+  font-size: 16px;
+  color: #888;
+}
+
+abbr[title] {
+  cursor: help;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+}
+
+ul > li:first-child {
+  font-weight: 500;
+}
+
+.card button {
+  display: grid;
+  place-items: center;
+  min-width: 200px;
+  padding: 10px 0;
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: inherit;
+  transition: background 0.3s, color 0.3s ease;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background: rgba(15, 113, 255, 0.5);
+  color: var(--color-light);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.alert {
+  border: 2px solid var(--color-alert);
+  background-color: #fff7e6;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.4);
+}
