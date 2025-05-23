@@ -23,3 +23,12 @@ for(let i = 0; i < teclas.length; i++){
   valorTeclaToDisplay(i);}
 }
 
+function valorTeclaToDisplay(i){
+  if (display.value.length< 14){
+    display.value += teclas[i].value;
+  } else {
+    alert("Limite de 14 dígitos atingidos");
+    
+  }
+}
+
